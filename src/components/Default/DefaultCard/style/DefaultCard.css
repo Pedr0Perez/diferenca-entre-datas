@@ -1,0 +1,15 @@
+.default-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.default-card .p-toggleable-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.default-card .p-toggleable-content .p-panel-content {
+  flex: 1;
+}
