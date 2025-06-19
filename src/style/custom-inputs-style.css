@@ -1,0 +1,15 @@
+@layer primereact {
+  .p-inputtext:enabled:hover {
+    border-color: var(--default-color);
+  }
+}
+
+@layer primereact {
+  .p-calendar:not(.p-calendar-disabled).p-focus > .p-inputtext {
+    outline: 0 none;
+    outline-offset: 0;
+    box-shadow: 0 0 0 0.2rem var(--default-color-box-shadow) !important;
+    border-color: var(--default-color) !important;
+  }
+}
+

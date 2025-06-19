@@ -3,10 +3,10 @@
   flex-direction: column;
   height: 100vh;
   margin: 0 !important;
-  padding: 8px !important; 
+  padding: 8px !important;
 }
 
 .main-content {
-    display: flex;
-    flex: 1;
+  display: flex;
+  flex: 1;
 }

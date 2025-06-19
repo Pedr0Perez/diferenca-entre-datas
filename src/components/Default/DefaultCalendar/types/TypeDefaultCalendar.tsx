@@ -4,6 +4,9 @@ type TypeDefaultCalendar = {
   name?: string;
   propertyInObject?: boolean;
   fullWidth?: boolean;
+  label?: string;
+  inline?: boolean;
+  showIcon?: boolean;
 };
 
 export default TypeDefaultCalendar;
