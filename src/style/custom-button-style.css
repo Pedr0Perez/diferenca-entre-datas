@@ -1,0 +1,24 @@
+@layer primereact {
+  .p-button {
+    color: #ffffff;
+    background: var(--default-color);
+    border: 1px solid var(--default-color);
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    border-radius: 6px;
+  }
+}
+
+@layer primereact {
+  .p-button:not(:disabled):hover {
+    background: var(--default-color-more-bright-1);
+    color: #ffffff;
+    border-color: var(--default-color-more-bright-1);
+  }
+}
+
+@layer primereact {
+  .p-button:focus {
+    box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px var(--default-color-box-shadow), 0 1px 2px 0 rgb(0, 0, 0);
+  }
+}
