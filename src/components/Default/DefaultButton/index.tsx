@@ -10,6 +10,7 @@ const DefaultButton = ({
   onClick,
   severity,
   outlined = false,
+  disabled = false,
 }: TypeDefaultButton): React.ReactNode => {
   return (
     <Button
@@ -21,6 +22,7 @@ const DefaultButton = ({
         className !== "" ? " " + className : ""
       }`}
       outlined={outlined}
+      disabled={disabled}
     />
   );
 };

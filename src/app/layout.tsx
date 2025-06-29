@@ -5,6 +5,8 @@ import "../style/colors-light.css";
 import "../style/custom-inputs-style.css";
 import "../style/custom-button-style.css";
 import "primeicons/primeicons.css";
+import PrimeReactLocale from "@/components/Wrappers/PrimeReactLocale";
+import InitialLoading from "@/components/Global/InitialLoading";
 
 export const metadata = {
   title: "Diferença entre duas datas",
@@ -20,7 +22,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className="god">{children}</body>
+      <PrimeReactLocale />
+      <body className="god">
+        <InitialLoading />
+        {children}
+      </body>
     </html>
   );
 }
