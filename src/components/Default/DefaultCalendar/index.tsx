@@ -4,7 +4,7 @@ import { Calendar } from "primereact/calendar";
 import TypeDefaultCalendar from "./types/TypeDefaultCalendar";
 import converterIsoParaDateTime from "@/utils/date/converterIsoParaDateTime";
 import converterDateTimeParaIso from "@/utils/date/converterDateTimeParaIso";
-import generateRandomHash from "@/utils/hash/generateRandomHash";
+import { useId } from "react";
 
 const DefaultCalendar = ({
   value,
@@ -16,12 +16,13 @@ const DefaultCalendar = ({
   inline = false,
   showIcon = false,
 }: TypeDefaultCalendar) => {
-  const randomId: string = generateRandomHash();
+  const randomId: string = useId();
 
   return (
     <div className="flex flex-column gap-1">
       <label htmlFor={randomId}>{label}</label>
       <Calendar
+        className={fullWidth ? "w-full" : ""}
         value={
           value !== undefined && value?.trim() !== ""
             ? converterIsoParaDateTime(value!)
@@ -29,6 +30,7 @@ const DefaultCalendar = ({
         }
         onChange={(e): void => {
           if (setValue === undefined) return;
+
           const val: string = converterDateTimeParaIso(e.value!);
           if (!propertyInObject) {
             setValue!(val);
@@ -38,7 +40,6 @@ const DefaultCalendar = ({
           setValue!((prev: object) => ({ ...prev, [name!]: val }));
         }}
         inputId={randomId}
-        className={fullWidth ? "w-full" : ""}
         dateFormat="dd/mm/yy"
         inline={inline}
         showIcon={showIcon}

@@ -6,6 +6,7 @@ type TypeDefaultButton = {
   outlined?: boolean;
   fullWidth?: boolean;
   className?: string;
+  disabled?: boolean;
 };
 
 export default TypeDefaultButton;

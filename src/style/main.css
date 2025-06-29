@@ -3,10 +3,14 @@
   flex-direction: column;
   height: 100vh;
   margin: 0 !important;
-  padding: 8px !important;
 }
 
 .main-content {
+  margin: 8px;
   display: flex;
   flex: 1;
+}
+
+.cursor-pointer {
+  cursor: pointer !important;
 }
