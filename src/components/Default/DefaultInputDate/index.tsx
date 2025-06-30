@@ -26,7 +26,7 @@ const DefaultInputDate = <T,>({
         onBlur={(e) => {
           if (setValue === undefined) return;
 
-          console.log(e.target.value);
+          //console.log(e.target.value);
 
             const val: string = converterBrDateParaIso(e.target.value!);
 
