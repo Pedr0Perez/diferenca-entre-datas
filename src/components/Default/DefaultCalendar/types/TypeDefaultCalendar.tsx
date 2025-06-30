@@ -1,6 +1,6 @@
-type TypeDefaultCalendar = {
+type TypeDefaultCalendar<T,> = {
   value?: string | null;
-  setValue?: React.Dispatch<React.SetStateAction<any>>;
+  setValue?: React.Dispatch<React.SetStateAction<T>>;
   name?: string;
   propertyInObject?: boolean;
   fullWidth?: boolean;

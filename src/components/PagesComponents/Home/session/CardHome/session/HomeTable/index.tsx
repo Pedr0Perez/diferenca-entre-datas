@@ -4,10 +4,7 @@ import React, { memo, useEffect, useState } from "react";
 import DefaultTable from "@/components/Default/DefaultTable";
 import { Column } from "primereact/column";
 import TypeDadosCalculados from "./types/TypeDadosCalculados";
-import TypeRelactionCalculatedDataXFunction from "./types/TypeRelactionCalculatedDataXFunction";
 import TypeHomeTable from "./types/TypeHomeTable";
-import relactionCalculatedDataXFunctionData from "./data/relactionCalculatedDataXFunctionData";
-import propertyCalculatedData from "./data/propertyCalculatedData";
 import returnCalculatedDataData from "./function/returnCalculatedDataData";
 import percorrerListaDePropriedadesEInserirDados from "./function/percorrerListaDePropriedadesEInserirDados";
 
@@ -16,18 +13,21 @@ const HomeTable = ({ dateData, counter }: TypeHomeTable) => {
     Array<TypeDadosCalculados>
   >([]);
 
-  const calcularDados = (): void => {
-    const data = returnCalculatedDataData();
-    const clonedData = { ...data };
-
-    const calculatedDataToUpdate: Array<TypeDadosCalculados> = [clonedData];
-
-    percorrerListaDePropriedadesEInserirDados(dateData, calculatedDataToUpdate);
-
-    setCalculatedData([...calculatedDataToUpdate]);
-  };
-
   useEffect(() => {
+    const calcularDados = (): void => {
+      const data = returnCalculatedDataData();
+      const clonedData = { ...data };
+
+      const calculatedDataToUpdate: Array<TypeDadosCalculados> = [clonedData];
+
+      percorrerListaDePropriedadesEInserirDados(
+        dateData,
+        calculatedDataToUpdate
+      );
+
+      setCalculatedData([...calculatedDataToUpdate]);
+    };
+
     if (counter !== 0) {
       calcularDados();
     }
