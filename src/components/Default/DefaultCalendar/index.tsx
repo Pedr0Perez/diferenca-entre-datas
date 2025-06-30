@@ -6,7 +6,7 @@ import converterIsoParaDateTime from "@/utils/date/converterIsoParaDateTime";
 import converterDateTimeParaIso from "@/utils/date/converterDateTimeParaIso";
 import { useId } from "react";
 
-const DefaultCalendar = ({
+const DefaultCalendar = <T,>({
   value,
   setValue,
   name,
@@ -15,7 +15,7 @@ const DefaultCalendar = ({
   label = "",
   inline = false,
   showIcon = false,
-}: TypeDefaultCalendar) => {
+}: TypeDefaultCalendar<T>) => {
   const randomId: string = useId();
 
   return (
@@ -33,11 +33,11 @@ const DefaultCalendar = ({
 
           const val: string = converterDateTimeParaIso(e.value!);
           if (!propertyInObject) {
-            setValue!(val);
+            setValue!(val as T);
             return;
           }
 
-          setValue!((prev: object) => ({ ...prev, [name!]: val }));
+          setValue!((prev: T) => ({ ...prev, [name!]: val }));
         }}
         inputId={randomId}
         dateFormat="dd/mm/yy"
@@ -48,4 +48,4 @@ const DefaultCalendar = ({
   );
 };
 
-export default memo(DefaultCalendar);
+export default memo(DefaultCalendar) as typeof DefaultCalendar;

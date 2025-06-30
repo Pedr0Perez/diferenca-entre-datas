@@ -3,7 +3,7 @@ import TypeDataInformacoes from "./types/TypeDataInformacoes";
 export default function converterBrDateParaIso(data: string) {
   if (data === "") return "";
 
-  let [dia, mes, ano] = data.split("/");
+  const [dia, mes, ano] = data.split("/");
 
   if (!validarSeDiaMesOuAnoForamPreenchidos(dia, mes, ano)) {
     //return "";

@@ -1,11 +1,12 @@
 import React, { memo } from "react";
 import { Menubar } from "primereact/menubar";
 import "./style/Header.css";
+import Image from "next/image";
 
 const Header = (): React.ReactNode => {
   const start = (
     <div className="flex align-items-center">
-      <img alt="logo" src="/sis-logo.png" height="40" className="mr-2"></img>
+      <Image alt="Logo" src="/sis-logo.png" height={40} width={40} className="mr-2"/>
       <h3>Diferença entre duas datas</h3>
     </div>
   );

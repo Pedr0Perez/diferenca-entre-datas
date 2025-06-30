@@ -6,15 +6,14 @@ import TypeDefaultInputDate from "./types/TypeDefaultInputDate";
 import converterBrDateParaIso from "@/utils/date/converterBrDateParaIso";
 import converterIsoParaBrDate from "@/utils/date/converterIsoParaBrDate";
 
-const DefaultInputDate = ({
+const DefaultInputDate = <T,>({
   value,
   setValue,
   name,
   propertyInObject,
   fullWidth,
   label,
-  inline,
-}: TypeDefaultInputDate): React.ReactNode => {
+}: TypeDefaultInputDate<T>): React.ReactNode => {
   const randomId: string = useId();
 
   return (
@@ -32,11 +31,11 @@ const DefaultInputDate = ({
             const val: string = converterBrDateParaIso(e.target.value!);
 
             if (!propertyInObject) {
-                setValue(val);
+                setValue(val as T);
                 return;
             }
 
-            setValue((prev: object) => ({ ...prev, [name!]: val }));
+            setValue((prev: T) => ({ ...prev, [name!]: val }));
         }}
         id={randomId}
       />
@@ -44,4 +43,4 @@ const DefaultInputDate = ({
   );
 };
 
-export default memo(DefaultInputDate);
+export default memo(DefaultInputDate) as typeof DefaultInputDate;
