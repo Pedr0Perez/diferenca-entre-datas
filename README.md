@@ -1,14 +1,14 @@
 # Diferença entre duas datas
 Aplicação front-end simples que permite calcular a diferença em dias entre duas datas distintas. 
 
-# 📈 Tecnologias Utilizadas
+## 📈 Tecnologias Utilizadas
 - NextJS
 - PrimeReact
 - Jest
 - TypeScript
 - CSS
 
-# 🔧 Instalação
+## 🔧 Instalação
 - Antes de rodar a aplicação, cerifique-se de ter o NodeJS instalado em sua máquina: https://nodejs.org/pt/download.
 - Clone o repositório
   ```
@@ -20,7 +20,7 @@ Aplicação front-end simples que permite calcular a diferença em dias entre du
   npm run dev
   ```
 
-# 📘 Funcionalidades
+## 📘 Funcionalidades
 - Escreva uma data no campo "Data inicial"
 - Escreva uma data no campo "Data final"
 - Clique no botão "Calcular diferença" para visualizar a diferença entre as duas datas. Atualmente, a diferença entre as datas é exibida em dias, semanas, meses e anos.
