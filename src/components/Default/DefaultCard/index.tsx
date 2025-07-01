@@ -10,7 +10,11 @@ const DefaultCard = ({
   children,
 }: TypeDefaultCard): React.JSX.Element => {
   return (
-    <Panel header={title} className="default-card">
+    <Panel
+      header={title}
+      className="default-card"
+      style={{ maxWidth: "100%", overflowX: "auto" }}
+    >
       {children}
     </Panel>
   );

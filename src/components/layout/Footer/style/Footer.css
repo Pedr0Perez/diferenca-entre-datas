@@ -28,3 +28,20 @@
   font-size: 1.8rem;
   color: var(--text-gray) !important;
 }
+
+@media screen and (max-width: 380px) {
+  .default-footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .default-footer .version-info {
+    display: none;
+    padding: 1rem;
+  }
+}
