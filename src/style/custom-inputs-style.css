@@ -1,15 +1,31 @@
+/* Customizações de inputs da Prime React */
+
+/* InputText */
 @layer primereact {
   .p-inputtext:enabled:hover {
-    border-color: var(--default-color);
+    border-color: var(--default-color) !important;
+    box-shadow: 0 0 0 0.2rem var(--default-color-box-shadow) !important;
   }
 }
 
+/* Calendar */
 @layer primereact {
   .p-calendar:not(.p-calendar-disabled).p-focus > .p-inputtext {
-    outline: 0 none;
-    outline-offset: 0;
     box-shadow: 0 0 0 0.2rem var(--default-color-box-shadow) !important;
     border-color: var(--default-color) !important;
   }
 }
 
+/*Checkbox*/
+@layer primereact {
+  .p-checkbox:not(.p-disabled):has(.p-checkbox-input:hover) .p-checkbox-box {
+    border-color: var(--default-color) !important;
+  }
+}
+
+@layer primereact {
+  .p-checkbox.p-highlight .p-checkbox-box {
+    border-color: var(--default-color) !important;
+    background: var(--default-color) !important;
+  }
+}
