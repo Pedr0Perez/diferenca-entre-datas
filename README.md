@@ -15,6 +15,10 @@ Aplicação front-end simples que permite calcular a diferença em dias entre du
   git clone https://github.com/Pedr0Perez/diferenca-entre-datas
   cd diferenca-entre-datas
   ```
+- Instale as dependências
+  ```
+  npm i
+  ```  
 - Rode a aplicação
   ```
   npm run dev
