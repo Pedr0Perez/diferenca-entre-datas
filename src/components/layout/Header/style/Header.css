@@ -2,3 +2,18 @@
   margin: 8px 8px 0 8px;
 }
 
+.default-header .p-menubar-button {
+  display: none !important;
+}
+
+@media screen and (max-width: 354px) {
+  .default-header h3 {
+    font-size: 0.8rem !important;
+  }
+}
+
+@media screen and (max-width: 254px) {
+  .default-header h3 {
+    display: none !important;
+  }
+}
