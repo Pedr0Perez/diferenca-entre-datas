@@ -1,7 +1,6 @@
 import { AES } from "crypto-ts";
 import { WordArray } from "crypto-ts/src/lib/WordArray";
 import { enc } from "crypto-ts";
-import getEnv from "@/utils/env/getEnv";
 
 const secretKey: string =
   "c6f3afa47e33398abb202c38c673d12dacb493f581a65696330e24950b5f2485";

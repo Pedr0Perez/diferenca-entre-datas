@@ -2,9 +2,14 @@
 
 /* InputText */
 @layer primereact {
-  .p-inputtext:enabled:hover {
+  .p-inputtext:enabled:focus {
     border-color: var(--default-color) !important;
     box-shadow: 0 0 0 0.2rem var(--default-color-box-shadow) !important;
+  }
+}
+@layer primereact {
+  .p-inputtext:enabled:hover {
+    border-color: var(--default-color);
   }
 }
 
@@ -22,7 +27,6 @@
     border-color: var(--default-color) !important;
   }
 }
-
 @layer primereact {
   .p-checkbox.p-highlight .p-checkbox-box {
     border-color: var(--default-color) !important;

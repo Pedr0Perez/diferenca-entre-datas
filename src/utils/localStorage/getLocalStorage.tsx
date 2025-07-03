@@ -1,5 +1,9 @@
 import { decrypt } from "@/libs/encrypt/crypto";
 
 export default function getLocalStorage(key: string): string | null {
-  return decrypt<string>(localStorage.getItem(key));
+  try {
+    return decrypt<string>(localStorage.getItem(key)) ?? null;
+  } catch {
+    return null;
+  }
 }
