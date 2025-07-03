@@ -1,28 +1,35 @@
 import React, { memo } from "react";
 import "./style/Footer.css";
+import getEnv from "@/utils/env/getEnv";
 
 const Footer = (): React.ReactNode => {
   return (
     <footer className="default-footer">
       <div className="version-info">
-        <p>
-          <b>Calculadora de Diferença Entre Duas Datas</b>
-        </p>
-        <p>
-          <b>&copy; {new Date().getFullYear()} Pedro Perez</b>
-        </p>
+        <div className="version-info-container1">
+          <p className="app-name-footer">
+            Calculadora de Diferença Entre Duas Datas
+          </p>
+          <p className="app-version-footer">{getEnv<string>("APP_VERSION")}</p>
+        </div>
+        <div className="social-media">
+          <a href="https://github.com/Pedr0Perez" target="_blank">
+            <span>
+              <i className="pi pi-github"></i>
+            </span>
+          </a>
+          <a href="https://linkedin.com/in/pedro0-perez" target="_blank">
+            <span>
+              <i className="pi pi-linkedin"></i>
+            </span>
+          </a>
+        </div>
       </div>
-      <div className="social-media">
-        <a href="https://github.com/Pedr0Perez" target="_blank">
-          <span>
-            <i className="pi pi-github"></i>
-          </span>
-        </a>
-        <a href="https://linkedin.com/in/pedro0-perez" target="_blank">
-          <span>
-            <i className="pi pi-linkedin"></i>
-          </span>
-        </a>
+      <div className="developer-info">
+        <p>
+          &copy; {new Date().getFullYear()} Pedro Perez. Todos os direitos
+          reservados.
+        </p>
       </div>
     </footer>
   );

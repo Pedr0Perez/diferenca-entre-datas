@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "axios": "^1.10.0",
+    "crypto-js": "^4.2.0",
+    "crypto-ts": "^1.0.2",
     "next": "15.3.3",
     "primeflex": "^4.0.0",
     "primeicons": "^7.0.0",
