@@ -1,8 +1,13 @@
-import calcularDiferencaEntreDatasDias from "./calcularDiferencaEntreDatasDias";
-
 export default function calcularDiferencaEntreDatasSemanas(
   dataInicial: Date,
   dataFinal: Date
 ): number {
-  return parseFloat((calcularDiferencaEntreDatasDias(dataInicial, dataFinal) / 7).toFixed(2));
+  const totalDias =
+    (dataFinal.getTime() - dataInicial.getTime()) / 1000 / 60 / 60 / 24;
+
+  if (dataFinal > dataInicial) {
+    return Math.floor(totalDias / 7);
+  }
+
+  return Math.ceil(totalDias / 7);
 }

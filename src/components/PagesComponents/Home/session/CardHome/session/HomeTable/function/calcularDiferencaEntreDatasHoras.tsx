@@ -4,5 +4,5 @@ export default function calcularDiferencaEntreDatasHoras(
   dataInicial: Date,
   dataFinal: Date
 ): number {
-  return Math.ceil(calcularDiferencaEntreDatasMin(dataInicial, dataFinal) / 60);
+  return (dataFinal.getTime() - dataInicial.getTime()) / 1000 / 60 / 60;
 }

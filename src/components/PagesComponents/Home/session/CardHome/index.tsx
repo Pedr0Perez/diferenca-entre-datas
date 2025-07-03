@@ -10,6 +10,8 @@ import HomeTable from "./session/HomeTable";
 import CalendarSession from "./session/CalendarSession";
 import NotCalendarSession from "./session/NotCalendarSession";
 import { Checkbox } from "primereact/checkbox";
+import getLocalStorage from "@/utils/localStorage/getLocalStorage";
+import setLocalStorage from "@/utils/localStorage/setLocalStorage";
 
 const CardHome = () => {
   const [dateData, setDateData] = useState<TypeDateDate>({
@@ -17,10 +19,16 @@ const CardHome = () => {
     endDate: retornarDataAtualDaqui1AnoEmIso(),
   });
 
-  const [showCalendar, setShowCalendar] = useState<boolean>(false);
+  const [showCalendar, setShowCalendar] = useState<boolean>(
+    parseInt(getLocalStorage("calendar")!) === 1
+  );
 
   useEffect(() => {
-    //console.log(dateData.startDate);
+    setLocalStorage("calendar", showCalendar ? "1" : "0");
+  }, [showCalendar]);
+
+  useEffect(() => {
+    //console.log(dateData);
   }, [dateData]);
 
   const [counter, setCounter] = useState(0);

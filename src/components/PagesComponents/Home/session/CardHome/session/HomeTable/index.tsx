@@ -38,7 +38,7 @@ const HomeTable = ({ dateData, counter }: TypeHomeTable) => {
       <Column
         body={(data) =>
           `${data.daysNumber.toLocaleString("pt-br")} ${
-            data.daysNumber === 1 ? "dia" : "dias"
+            [1, -1].includes(data.daysNumber) ? "dia" : "dias"
           }`
         }
         header="N° de dias"
@@ -46,7 +46,7 @@ const HomeTable = ({ dateData, counter }: TypeHomeTable) => {
       <Column
         body={(data) =>
           `${data.weeksNumber.toLocaleString("pt-br")} ${
-            data.weeksNumber === 1 ? "semana" : "semanas"
+            [1, -1].includes(data.weeksNumber) ? "semana" : "semanas"
           }`
         }
         header="N° de semanas"
@@ -54,7 +54,7 @@ const HomeTable = ({ dateData, counter }: TypeHomeTable) => {
       <Column
         body={(data) =>
           `${data.monthsNumber.toLocaleString("pt-br")} ${
-            data.monthsNumber === 1 ? "mês" : "meses"
+            [1, -1].includes(data.monthsNumber) ? "mês" : "meses"
           }`
         }
         header="N° de meses"
@@ -62,7 +62,7 @@ const HomeTable = ({ dateData, counter }: TypeHomeTable) => {
       <Column
         body={(data) =>
           `${data.yearsNumber.toLocaleString("pt-br")} ${
-            data.yearsNumber === 1 ? "ano" : "anos"
+            [1, -1].includes(data.yearsNumber) ? "ano" : "anos"
           }`
         }
         header="N° de anos"

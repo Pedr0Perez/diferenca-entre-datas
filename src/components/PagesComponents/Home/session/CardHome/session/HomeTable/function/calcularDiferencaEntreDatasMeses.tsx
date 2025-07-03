@@ -1,12 +1,16 @@
-import calcularDiferencaEntreDatasDias from "./calcularDiferencaEntreDatasDias";
-
 export default function calcularDiferencaEntreDatasMeses(
   dataInicial: Date,
   dataFinal: Date
 ): number {
-  return parseFloat(
-    (
-      calcularDiferencaEntreDatasDias(dataInicial, dataFinal) / 30.436875
-    ).toFixed(2)
-  );
+  const anos = dataFinal.getFullYear() - dataInicial.getFullYear();
+
+  const meses = dataFinal.getMonth() - dataInicial.getMonth();
+
+  let totalMeses = anos * 12 + meses;
+
+  if (dataFinal.getDate() < dataInicial.getDate()) {
+    totalMeses--;
+  }
+
+  return totalMeses;
 }

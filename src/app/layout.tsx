@@ -7,6 +7,7 @@ import "../style/custom-button-style.css";
 import "primeicons/primeicons.css";
 import PrimeReactLocale from "@/components/Wrappers/PrimeReactLocale";
 import InitialLoading from "@/components/Global/InitialLoading";
+import LocalStorageCalendar from "@/components/Wrappers/LocalStorageCalendar";
 
 export const metadata = {
   title: "Diferença entre duas datas",
@@ -23,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <PrimeReactLocale />
+      <LocalStorageCalendar />
       <body className="god">
         <InitialLoading />
         {children}
