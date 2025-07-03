@@ -36,6 +36,9 @@
 .social-media {
   display: flex;
   gap: 1rem;
+  height: 2rem;
+  justify-content: space-between;
+  width: 5rem;
 }
 
 .app-name-footer {
@@ -59,6 +62,11 @@
   font-size: 1.8rem;
   color: #9ca3af !important;
   transition: 0.2s font-size ease-in-out;
+}
+
+.social-media a {
+  display: flex;
+  align-items: center;
 }
 
 .social-media a span i:hover {
