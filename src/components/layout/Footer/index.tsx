@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 import "./style/Footer.css";
-import getEnv from "@/utils/env/getEnv";
+import getPublicEnv from "@/utils/env/getPublicEnv";
 
 const Footer = (): React.ReactNode => {
   return (
@@ -10,7 +10,7 @@ const Footer = (): React.ReactNode => {
           <p className="app-name-footer">
             Calculadora de Diferença Entre Duas Datas
           </p>
-          <p className="app-version-footer">{getEnv<string>("APP_VERSION")}</p>
+          <p className="app-version-footer">{getPublicEnv<string>("APP_VERSION")}</p>
         </div>
         <div className="social-media">
           <a href="https://github.com/Pedr0Perez" target="_blank">
