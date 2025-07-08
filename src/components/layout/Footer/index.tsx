@@ -1,6 +1,5 @@
 import React, { memo } from "react";
 import "./style/Footer.css";
-import getPublicEnv from "@/utils/env/getPublicEnv";
 
 const Footer = (): React.ReactNode => {
   return (
