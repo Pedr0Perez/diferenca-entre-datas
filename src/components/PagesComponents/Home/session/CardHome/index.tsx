@@ -20,7 +20,7 @@ const CardHome = () => {
   });
 
   const [showCalendar, setShowCalendar] = useState<boolean>(
-    parseInt(getLocalStorage("calendar")!) === 1
+    getLocalStorage("calendar") === "1"
   );
 
   useEffect(() => {
