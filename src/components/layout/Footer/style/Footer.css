@@ -77,6 +77,17 @@
   .version-info {
     flex-direction: column;
   }
+
+  .default-footer .version-info p {
+    text-align: center;
+  }
+
+  .version-info-container1 {
+    margin-bottom: 1rem;
+  }
+  .developer-info {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 66rem) {
@@ -91,7 +102,7 @@
     justify-content: center;
     flex-direction: column;
     gap: 8px;
-    padding: 0.7rem;
+    padding: 1.25rem;
   }
 }
 

@@ -11,12 +11,12 @@ export function encrypt(data: string | WordArray): string {
   return encryptData;
 }
 
-export function decrypt<T>(data: string | null): T | null {
+export function decrypt(data: string | null): string | null {
   if (data === null) return null;
 
   const bytes: WordArray = AES.decrypt(data!, secretKey);
 
-  const decryptedData: T = JSON.parse(bytes.toString(enc.Utf8));
+  //const decryptedData: T = JSON.parse(bytes.toString(enc.Utf8));
 
-  return decryptedData;
+  return bytes.toString(enc.Utf8);
 }
