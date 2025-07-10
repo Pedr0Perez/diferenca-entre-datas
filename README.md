@@ -24,6 +24,14 @@ Aplicação front-end simples que permite calcular a diferença em dias entre du
   npm run dev
   ```
 
+## 🧪 Testes Unitários
+- Foram desenvolvidos testes unitários visando garantir a estabilidade dos componentes de layout da aplicação e das funções responsáveis pela conversão entre diferentes formatos de data.
+- Rode os testes
+  ```
+  npm run test
+  ```
+- Para visualizar os testes, acesse o diretório: `diferenca-entre-datas/src/tests`
+
 ## 📘 Funcionalidades
 - Escreva uma data no campo "Data inicial"
 - Escreva uma data no campo "Data final"
