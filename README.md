@@ -37,5 +37,8 @@ Aplicação front-end simples que permite calcular a diferença em dias entre du
 - Escreva uma data no campo "Data final"
 - Clique no botão "Calcular diferença" para visualizar a diferença entre as duas datas. Atualmente, a diferença entre as datas é exibida em dias, semanas, meses e anos.
 
-## 💻 Aplicação em Funcionamento
+## 💻 Aplicação rodando em Desktop
 !['Screenshort'](./print-desktop.png)
+
+## 💻 Aplicação rodando em Mobile
+!['Screenshort'](./print-mobile.png)
